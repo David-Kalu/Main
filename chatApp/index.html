@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatApp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h2 class="logo">chatSmart</h2>
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" placeholder="searh for creators and inspirations">
+            </div>
+            <div class="create">
+                <label class = "btn btn-primary" for="create-post">Create</label>
+                <div class="profile-photo">
+                    <img src="./images/profile-1.jpg" alt="profile-pircture">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-----Main section-------->
+
+    <main>
+        <div class="container">
+            <!----------Left-------------->
+            <div class="left">
+                <a class="profile">
+                    <div class="profile-photo">
+                        <img src="./images/profile-1.jpg" alt="profile-photo">
+                    </div>
+                    <div class="handle">
+                        <h4>Kalu Ndubuisi</h4>
+                        <p class="text-muted">@Kalu1</p>
+                    </div>
+                </a>
+                <!---------sidebar-------------->
+
+                <div class="sidebar">
+                    <a class="menu-item active"> 
+                        <span><i class="fa-solid fa-house"></i></span><h3>Home</h3>
+                    </a>
+                    <a class="menu-item"> 
+                        <span><i class="fa-solid fa-compass"></i></span><h3>Explore</h3> 
+                    </a>
+                    <a class="menu-item" id="notifications"> 
+                        <span><i class="fa-solid fa-bell"><small class = "notification-count">6+</small></i></span><h3>Notifications</h3>
+                        <!----------Notification popup--------------------->
+                        <div class="notifications-popup">
+
+                            <div class="profile-photo">
+                                <img src="./images/profile-8.jp" alt="">
+                            </div>
+                            <div class="notifications-body">
+                                <p><b>Hope Monday</b>liked your comment</p>
+                                <small class="text-muted">a day ago</small>
+                            </div>
+
+                            <div class="profile-photo">
+                                <img src="./images/profile-5.jpg" alt="">
+                            </div>
+                            <div class="notifications-body">
+                                <p><b>Alisson Becker</b>reacted to your post</p>
+                                <small class="text-muted">5 days ago</small>                                
+                            </div>
+
+                            <div class="profile-photo">
+                                <img src="./images/profile-6.jpg" alt="">
+                            </div>
+                            <div class="notifications-body">
+                                <p><b>Curtis Jones</b>commented on your post</p>
+                                <small class="text-muted">5 mins ago</small>                                
+                            </div>
+
+                            <div class="profile-photo">
+                                <img src="./images/profile-7.jpg" alt="">
+                            </div>
+                            <div class="notifications-body">
+                                <p><b>Thiago Alcantara</b>viewed your story</p>
+                                <small class="text-muted">5 days ago</small>    
+                            </div>
+
+                        </div>
+                        <!----------End of notification popup--------------------->
+                    </a>
+                
+                    <a class="menu-item" id="message-notifications"> 
+                        <span><i class="fa-solid fa-message"><small class ="notification-count">5+</small></i></span><h3>Message</h3>
+                    </a>
+                    <a class="menu-item"> 
+                        <span><i class="fa-solid fa-bookmark"></i></span><h3>Bookmarks</h3>
+                    </a>
+                    <a class="menu-item"> 
+                        <span><i class="fa-solid fa-chart-pie"></i></span><h3>Aanalytics</h3> 
+                    </a>
+                    <a class="menu-item"> 
+                        <span><i class="fa-solid fa-palette"></i></span><h3>Themes</h3>  
+                    </a>
+                    <a class="menu-item"> 
+                        <span><i class="fa-solid fa-gear"></i></span><h3>settings</h3>
+                    </a>
+                
+                </div>
+                <!-------------End of Side bar------------------------------------->
+
+                <label for="Create-post" class="btn btn-primary">Create Post</label>
+
+            </div>
+
+             <!----------Middle-------------->
+            <div class="middle">
+
+            </div>
+            <!----------Right-------------->
+            <div class="right">
+
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
