@@ -170,6 +170,7 @@ main .container .left .profile{
   
 }
 
+
 .left .sidebar a {
 
     display: flex;
@@ -179,9 +180,9 @@ main .container .left .profile{
     transition: all 400ms ease;
     position: relative;
     gap:1rem;
-  
-
 }
+
+
 
 .left .sidebar a:hover{
 
@@ -244,4 +245,55 @@ main .container .left .profile{
     margin-top: 2rem;
     width: 100%;
     text-align: center;
+    padding: 1rem 0;
+}
+
+.left .sidebar .menu-item:first-child.active{
+    border-top-left-radius: var(--card-border-radius);
+    overflow: hidden;
+}
+
+.left .sidebar .menu-item:last-child.active{
+    border-bottom-left-radius: var(--card-border-radius);
+    overflow: hidden;
+}
+
+.left .notifications-popup{
+    position: absolute;
+    background: white;
+    z-index: 8;
+    border-radius: var(--card-border-radius);
+    width: 25rem;
+    padding: var(--card-padding);
+    top: 0;
+    left: 110%;
+    box-shadow: 0 0 2rem hsl(var(--color-primary),75%, 60%, 25%);
+    height: fit-content;
+    display: none;
+}
+
+.left .notifications-popup::before{
+    content: "";
+    width: 1.2rem;
+    height: 1.2rem;
+    position: absolute;
+    background: white;
+    display: block;
+    left: -0.3rem;
+    transform: rotate(60deg);
+}
+
+.left .notifications-popup > div{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.left .notifications-popup > small{
+    display: block;
+}
+
+.left .notifications-popup .notifications-body > p > b{
+    margin-right: 0.5rem;
 }
