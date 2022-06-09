@@ -398,3 +398,27 @@ main .container .left .profile{
     text-align: center;
     padding: 0.5rem 0.5rem;
 }
+
+.middle .feeds {
+    margin-top: 2rem;
+}
+
+.middle .feeds .feed .head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.middle .feeds .feed .head .user{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.middle .feeds .feed .head .user .info h3{
+    margin-bottom: 0.1rem;
+}
+
+.middle .feeds .feed .photo-posted{
+    margin-top: 1rem;
+}
