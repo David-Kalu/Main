@@ -104,7 +104,7 @@ nav .container{
     justify-content: space-between;
 }
 
-nav .search-bar{
+.search-bar{
     background-color: var(--color-light);
     border-radius: var(--border-radius);
     padding: var(--search-padding);
@@ -119,7 +119,7 @@ nav .search-bar input[type="search"]{
     outline: none;
 }
 
-nav .search-bar input[type="search"]::placeholder{
+.search-bar input[type="search"]::placeholder{
     color: var(--color-grey);
 }
 nav .create{
@@ -399,8 +399,14 @@ main .container .left .profile{
     padding: 0.5rem 0.5rem;
 }
 
-.middle .feeds {
+.middle .feeds .feed {
     margin-top: 2rem;
+    background: white;
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin: 1rem 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
 }
 
 .middle .feeds .feed .head{
@@ -412,13 +418,104 @@ main .container .left .profile{
 .middle .feeds .feed .head .user{
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
-.middle .feeds .feed .head .user .info h3{
-    margin-bottom: 0.1rem;
+.middle .feed .head i{
+    font-size: 1.4rem;
+    margin-right: 0.5rem;
+
 }
 
-.middle .feeds .feed .photo-posted{
-    margin-top: 1rem;
+.middle .feed .photo-posted{
+    margin: 0.7rem 0;
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+}
+
+.middle .feed .action-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    margin: 0.6rem;
+}
+
+.middle .feed .action-buttons .interaction{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.7rem;
+}
+
+
+.middle .feed .liked-by{
+    display: flex;
+    
+}
+
+.middle .feed .liked-by span{
+    width: 1.6rem;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    display: block;
+    border: 3px solid white;
+    margin-left: -0.6rem;
+}
+
+.middle .feed .liked-by p{
+    margin-left: 0.3rem;
+}
+
+.middle .feed .liked-by span:first-child{
+    margin: 0;
+}
+
+.main .container .right{
+    height: max-content;
+    position: sticky;
+    top: var(--sticky-top-right);
+    bottom: 0;
+}
+.right .messages{
+    background: white;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+}
+
+.right .messages .heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;    
+}
+
+.right .messages i{
+    font-size: 1.2rem;
+}
+.right .messages .search-bar{
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.right .messages .search-bar i{
+    font-size: 0.9rem;
+}
+
+.right .messages .search-bar input[type="search"]{
+    width: 12vh;
+    outline: none;
+    background: none;
+}
+
+.right .messages .search-bar input[type="search"]::placeholder{
+    font-size: 0.7rem;
+
+}
+.right .messages .category{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
 }
