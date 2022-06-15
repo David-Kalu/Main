@@ -276,7 +276,7 @@ main .container .left .profile{
     background: white;
     display: block;
     left: -0.3rem;
-    transform: rotate(60deg);
+    transform: rotate(45deg);
 }
 
 .left .notifications-popup > div{
@@ -615,7 +615,8 @@ main .container .right{
     background: white;
     padding: 3rem;
     border-radius: var(--card-border-radius);
-    width: 50%;    
+    width: 50%; 
+    box-shadow: 0 0 1rem var(--color-primary);   
 }
 
 /* Font */
@@ -784,6 +785,10 @@ main .container .right{
     .left .btn{
         display: none;
     }
+
+    .customize-theme .card{
+        width: 96vw;
+    }
 }
 
 @media screen and (max-width: 1024px){
@@ -800,6 +805,10 @@ main .container .right{
         grid-template-columns: 5rem auto 30vw;
         gap: 1rem;
         margin-right: 3rem;
+    }
+
+    .customize-theme .card{
+        width: 70vw;
     }
 
 }
@@ -843,6 +852,10 @@ main .container .right{
 
     main .container .right{
         display: none;
+    }
+    .customize-theme .card{
+        width: 100vw;
+        place-items: center;
     }
 
 }

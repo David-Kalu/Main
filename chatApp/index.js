@@ -3,10 +3,12 @@ const messageNotifications= document.querySelector('#message-notifications');
 const messageBox = document.querySelector('.messages');
 const messageSearch = document.querySelector('#message-search');
 const messages = document.querySelectorAll('.message');
+const themeModal = document.querySelector('.customize-theme');
+const themeButton = document.querySelector('#theme-button');
 
 console.log(messages);
 
-
+//Remove activeclass
 
 function removeActiveClass(){
     menuItems.forEach((menuItem) =>{
@@ -34,6 +36,8 @@ for(let item of menuItems){
     })
 }
 
+//Notification-count and shadow
+
 messageNotifications.addEventListener('click', () =>{
     messageNotifications.querySelector('.notification-count').
     style.display = 'none';
@@ -43,6 +47,8 @@ messageNotifications.addEventListener('click', () =>{
     }, 2000)
 
 })
+
+//message search//
 
 function searchMessage(){
     const val = messageSearch.value.toLowerCase();
@@ -64,6 +70,18 @@ function searchMessage(){
 
 
 messageSearch.addEventListener('keyup', searchMessage);
+
+//Theme customization//
+
+
+function openThemeModal(){
+    themeModal.style.display = 'grid';
+}
+
+themeButton.addEventListener('click', openThemeModal);
+
+
+
 
 
 
