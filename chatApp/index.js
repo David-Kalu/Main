@@ -5,6 +5,8 @@ const messageSearch = document.querySelector('#message-search');
 const messages = document.querySelectorAll('.message');
 const themeModal = document.querySelector('.customize-theme');
 const themeButton = document.querySelector('#theme-button');
+const chooseSize =  document.querySelectorAll('.choose-size span')
+var root = document.querySelector(':root');
 
 console.log(messages);
 
@@ -79,6 +81,39 @@ function openThemeModal(){
 }
 
 themeButton.addEventListener('click', openThemeModal);
+
+function closeThemeModal (e){
+    if(e.target.classList.contains('customize-theme')){
+        themeModal.style.display = 'none';
+    }
+}
+
+themeModal.addEventListener('click', closeThemeModal);
+
+//changing fontSize
+
+chooseSize.forEach((size) =>{
+
+    let fontSize;
+
+    size.addEventListener('click', () =>{
+
+        if(size.classList.contains('font-size-1')){
+            fontSize = '7px';
+            root.setProperty()
+        }else if(size.classList.contains('font-size-2')){
+            fontSize = '10px';
+        }else if(size.classList.contains('font-size-3')){
+            fontSize = '13px';
+        }
+
+    document.querySelector('html').style.fontSize = fontSize;
+    })
+
+    
+})
+
+
 
 
 
