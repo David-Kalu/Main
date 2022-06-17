@@ -11,6 +11,9 @@
     --color-danger: hsl(0, 95%, 65%);
     --color-dark: hsl(252, 30%, 17%);    
     --color-black: hsl(252, 30%, 10%);
+    --color-light-blue:hsl(202, 75%, 60%);
+    --color-yellow:  hsl(52, 75%, 60%);
+    --color-green: hsl(152, 75%, 60%);
 
     --border-radius: 2rem;
     --card-border-radius: 1rem;
@@ -684,7 +687,7 @@ main .container .right{
 }
 
 .customize-theme .color .choose-color span:nth-child(1){
-    background: var(--color-primary);
+    background: hsl(252, 75%, 60%);
 }
 
 .customize-theme .color .choose-color span:nth-child(2){

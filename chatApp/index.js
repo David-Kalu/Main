@@ -7,6 +7,7 @@ const themeModal = document.querySelector('.customize-theme');
 const themeButton = document.querySelector('#theme-button');
 const chooseSize =  document.querySelectorAll('.choose-size span')
 var root = document.querySelector(':root');
+const chooseColor = document.querySelectorAll('.choose-color span')
 
 console.log(messages);
 
@@ -54,7 +55,6 @@ messageNotifications.addEventListener('click', () =>{
 
 function searchMessage(){
     const val = messageSearch.value.toLowerCase();
-    console.log(val)
 
     messages.forEach((chat) => {
         let name = chat.querySelector('h5').innerText.toLowerCase();
@@ -92,30 +92,59 @@ themeModal.addEventListener('click', closeThemeModal);
 
 //changing fontSize
 
+function removeFontSizeActiveClass() {
+    chooseSize.forEach(size =>{
+        size.classList.remove('active');
+    })
+}
+
 chooseSize.forEach((size) =>{
 
     let fontSize;
-
+        
     size.addEventListener('click', () =>{
 
+        removeFontSizeActiveClass();
+
+        size.classList.add('active');
+        
         if(size.classList.contains('font-size-1')){
             fontSize = '7px';
-            root.setProperty()
         }else if(size.classList.contains('font-size-2')){
             fontSize = '10px';
         }else if(size.classList.contains('font-size-3')){
             fontSize = '13px';
         }
 
-    document.querySelector('html').style.fontSize = fontSize;
+        document.querySelector('html').style.fontSize = fontSize;
     })
 
     
 })
 
+//colors
+
+chooseColor.forEach(color =>{
 
 
 
+    color.addEventListener('click', () =>{
+
+        if(color.classList.contains('color-1')){
+            root.style.setProperty('--color-primary', 'hsl(252, 75%, 60%)');
+        }else if(color.classList.contains('color-2')){
+            root.style.setProperty('--color-primary', 'hsl(52, 75%, 60%)');
+        }else if(color.classList.contains('color-3')){
+            root.style.setProperty('--color-primary','hsl(152, 75%, 60%)');
+        }else if(color.classList.contains('color-4')){
+            root.style.setProperty('--color-primary', 'hsl(0, 95%, 65%)');
+        }
+        else if(color.classList.contains('color-5')){
+            root.style.setProperty('--color-primary', 'hsl(202, 75%, 60%)');
+        }
+
+    })
+})
 
 
 
