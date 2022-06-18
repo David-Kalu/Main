@@ -8,8 +8,8 @@ const themeButton = document.querySelector('#theme-button');
 const chooseSize =  document.querySelectorAll('.choose-size span')
 var root = document.querySelector(':root');
 const chooseColor = document.querySelectorAll('.choose-color span')
+const chooseBackground = document.querySelectorAll('.choose-bg')
 
-console.log(messages);
 
 //Remove activeclass
 
@@ -21,25 +21,31 @@ function removeActiveClass(){
 
 for(let item of menuItems){
 
+    let popup = document.querySelector('.notifications-popup')
+        
     item.addEventListener('click', () =>{
         removeActiveClass();
         item.classList.add('active');
-
+        
         if(item.id != 'notifications'){
             document.querySelector('.notifications-popup').
             style.display = 'none';
             
-        }else{
-            document.querySelector('.notifications-popup').
-            style.display = 'block';
+        }else if(item.id = 'notifications'){            
+            popup.style.display = 'block';
+            popup.style.boxShadow = '0 0 1rem var(--color-primary)';
+            setTimeout(() =>{
+                popup.style.boxShadow = 'none';
+            }, 3000)
             document.querySelector('.notification-count').
             style.display = 'none';
         }
-        
+                
     })
+
 }
 
-//Notification-count and shadow
+//Remove notification-count and display box shadow
 
 messageNotifications.addEventListener('click', () =>{
     messageNotifications.querySelector('.notification-count').
@@ -47,7 +53,7 @@ messageNotifications.addEventListener('click', () =>{
     messageBox.style.boxShadow = '0 0 1rem var(--color-primary)';
     setTimeout(() => {
         messageBox.style.boxShadow = 'none';
-    }, 2000)
+    }, 3000)
 
 })
 
@@ -70,7 +76,6 @@ function searchMessage(){
     
 }
 
-
 messageSearch.addEventListener('keyup', searchMessage);
 
 //Theme customization//
@@ -90,7 +95,7 @@ function closeThemeModal (e){
 
 themeModal.addEventListener('click', closeThemeModal);
 
-//changing fontSize
+//change fontSize
 
 function removeFontSizeActiveClass() {
     chooseSize.forEach(size =>{
@@ -109,11 +114,11 @@ chooseSize.forEach((size) =>{
         size.classList.add('active');
         
         if(size.classList.contains('font-size-1')){
-            fontSize = '7px';
+            fontSize = '8px';
         }else if(size.classList.contains('font-size-2')){
-            fontSize = '10px';
+            fontSize = '9px';
         }else if(size.classList.contains('font-size-3')){
-            fontSize = '13px';
+            fontSize = '11px';
         }
 
         document.querySelector('html').style.fontSize = fontSize;
@@ -122,13 +127,21 @@ chooseSize.forEach((size) =>{
     
 })
 
-//colors
+//change theme color
+
+let removeColorActiveClass = () =>{
+    chooseColor.forEach(color =>{
+        color.classList.remove('active');
+    })
+}
 
 chooseColor.forEach(color =>{
 
-
-
     color.addEventListener('click', () =>{
+
+        removeColorActiveClass();
+
+        color.classList.add('active');
 
         if(color.classList.contains('color-1')){
             root.style.setProperty('--color-primary', 'hsl(252, 75%, 60%)');
@@ -146,6 +159,95 @@ chooseColor.forEach(color =>{
     })
 })
 
+//change background colors
+
+let whiteColorLightness;
+let darkColorLightness;
+let lightColorLightness;
+
+let bg1 = document.querySelector('.bg-1');
+let bg2 = document.querySelector('.bg-2');
+let bg3 = document.querySelector('.bg-3');
+
+const changeBackground = () =>{
+    root.style.setProperty('--light-color-lightness', lightColorLightness);
+    root.style.setProperty('--dark-color-lightness', darkColorLightness);
+    root.style.setProperty('--white-color-lightness', whiteColorLightness);
+}
+
+bg1.addEventListener('click', () => {
+    bg1.classList.add('active');
+    bg2.classList.remove('active');
+    bg3.classList.remove('active');
+    
+    darkColorLightness = '17%';
+    whiteColorLightness = '100%';
+    lightColorLightness = '95%';
+
+    changeBackground();
+})
+
+
+bg2.addEventListener('click', () => {
+    bg2.classList.add('active')
+    bg1.classList.remove('active');
+    bg3.classList.remove('active');
+
+    darkColorLightness = '95%';
+    whiteColorLightness = '20%';
+    lightColorLightness = '15%';
+
+    changeBackground();
+})
+
+bg3.addEventListener('click', () => {
+    bg3.classList.add('active');
+    bg1.classList.remove('active');
+    bg2.classList.remove('active');
+
+    darkColorLightness = '95%';
+    whiteColorLightness = '10%';
+    lightColorLightness = '0%';
+
+    changeBackground();
+})
+
+
+/*let removeBackgroundColorActiveClass = () =>{
+    chooseBackground.forEach(backgroundColor =>{
+        backgroundColor.classList.remove('active');
+    })
+}
+
+chooseBackground.forEach(backgroundColor =>{
+
+    backgroundColor.addEventListener('click', () => {
+
+        removeBackgroundColorActiveClass();
+
+        backgroundColor.classList.add('active');
+
+        if(backgroundColor.classList.contains('bg-1')){
+            darkColorLightness = '17%';
+            whiteColorLightness = '100%';
+            lightColorLightness = '95%';
+            
+        }else if(backgroundColor.classList.contains('bg-2')){
+            darkColorLightness = '95%';
+            whiteColorLightness = '20%';
+            lightColorLightness = '15%';
+
+        }else if(backgroundColor.classList.contains('bg-3')){
+            darkColorLightness = '95%';
+            whiteColorLightness = '10%';
+            lightColorLightness = '0%';
+        }
+
+        changeBackground(); 
+    })
+
+    
+})*/
 
 
 

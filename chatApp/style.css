@@ -2,18 +2,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap');
 
 :root{
-    --color-dark: hsl(252, 30%, 17%);
-    --color-light: hsl(252, 30%, 95%);
+
+
+    --dark-color-lightness:17%;
+    --white-color-lightness:100%;
+    --light-color-lightness:95%;
+    
+
+    --color-dark: hsl(252, 30%, var(--dark-color-lightness));
+    --color-light: hsl(252, 30%, var(--light-color-lightness));
+    --color-white: hsl(252,30%, var(--white-color-lightness));
     --color-grey: hsl(252, 15%, 65%);
     --color-primary: hsl(252, 75%, 60%);
     --color-secondary: hsl(252, 58%, 80%);    
-    --color-sucess: hsl(120, 88%, 64%);    
-    --color-danger: hsl(0, 95%, 65%);
-    --color-dark: hsl(252, 30%, 17%);    
+    --color-sucess: hsl(120, 88%, 50%);    
+    --color-danger: hsl(0, 95%, 65%);  
     --color-black: hsl(252, 30%, 10%);
-    --color-light-blue:hsl(202, 75%, 60%);
-    --color-yellow:  hsl(52, 75%, 60%);
-    --color-green: hsl(152, 75%, 60%);
+    --color-light-blue:hsl(202, 75%, 50%);
+    --color-yellow:  hsl(52, 75%, 50%);
+    --color-green: hsl(152, 75%, 50%);
 
     --border-radius: 2rem;
     --card-border-radius: 1rem;
@@ -93,7 +100,7 @@ img{
 
 nav{
     width: 100%;
-    background-color: white;
+    background-color: var(--color-white);
     padding: 0.7rem 0;
     position: fixed;
     top: 0;
@@ -154,7 +161,7 @@ main .container .left{
 }
 
 main .container .left .profile{
-    background: white;
+    background: var(--color-white);
     width: 100%;
     padding: var(--card-padding);
     display: flex;
@@ -168,7 +175,7 @@ main .container .left .profile{
 
 .left .sidebar{
     margin-top: 1rem;
-    background: white;
+    background: var(--color-white);
     border-radius: var(--card-border-radius);
   
 }
@@ -199,7 +206,7 @@ main .container .left .profile{
 
 .left .sidebar i .notification-count{
     background-color: var(--color-danger);
-    color: white;
+    color: var(--color-white);
     border-radius: 3rem;
     font-size: 0.6rem;
     width: fit-content;
@@ -259,7 +266,7 @@ main .container .left .profile{
 
 .left .notifications-popup{
     position: absolute;
-    background: white;
+    background: var(--color-white);
     z-index: 8;
     border-radius: var(--card-border-radius);
     width: 25rem;
@@ -276,7 +283,7 @@ main .container .left .profile{
     width: 1.2rem;
     height: 1.2rem;
     position: absolute;
-    background: white;
+    background: var(--color-white);
     display: block;
     left: -0.3rem;
     transform: rotate(45deg);
@@ -315,7 +322,7 @@ main .container .left .profile{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: var(--color-white);
     font-size: 0.75rem;
     width: 100%;
     position: relative;
@@ -377,7 +384,7 @@ main .container .left .profile{
     justify-content: space-between;
     margin-top: 1rem;
     width: 100%;
-    background: white;
+    background: var(--color-white);
     padding: 0.4rem var(--card-padding);
     border-radius: var(--border-radius)
 }
@@ -400,7 +407,7 @@ main .container .left .profile{
 
 .middle .feeds .feed {
     margin-top: 2rem;
-    background: white;
+    background: var(--color-white);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
     margin: 1rem 0;
@@ -457,7 +464,7 @@ main .container .left .profile{
     border-radius: var(--border-radius);
     overflow: hidden;
     display: block;
-    border: 3px solid white;
+    border: 3px solid var(--color-white);
     margin-left: -0.6rem;
 }
 
@@ -478,7 +485,7 @@ main .container .right{
     bottom: 0;
 }
 .right .messages{
-    background: white;
+    background: var(--color-white);
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
 }
@@ -559,7 +566,7 @@ main .container .right{
     height: 0.8rem;
     background:var(--color-sucess);
     border-radius: 50%;
-    border: 2px solid white;
+    border: 2px solid var(--color-white);
     bottom: 0;
     right: 0;
 }
@@ -575,7 +582,7 @@ main .container .right{
 }
 
 .right .request{
-    background: white;
+    background: var(--color-white);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
     margin-bottom: 0.7rem;
@@ -615,7 +622,7 @@ main .container .right{
 }
 
 .customize-theme .card{
-    background: white;
+    background: var(--color-white);
     padding: 3rem;
     border-radius: var(--card-border-radius);
     width: 50%; 
@@ -658,6 +665,7 @@ main .container .right{
 
 .customize-theme .choose-size span.active{
     background: var(--color-primary);
+    border: 2px solid white;
 }
 
 /* color */
@@ -707,7 +715,7 @@ main .container .right{
 }
 
 .customize-theme .color .active{
-    border: 3px solid black;
+    border: 3px solid white;
 }
 
 .customize-theme .background{
@@ -755,10 +763,23 @@ main .container .right{
 .customize-theme .background .choose-bg > div span{
     width: 2rem;
     height: 2rem;
-    border: 2px solid var(--color-primary);
     border-radius: 50%;
     margin-right: 1rem;
 }
+
+.customize-theme .background .choose-bg .bg-1 span{
+    border: 2px solid black;   
+}
+
+.customize-theme .background .choose-bg .bg-2 span{
+    border: 2px solid white;   
+}
+
+.customize-theme .background .choose-bg .bg-3 span{
+    border: 2px solid white;   
+}
+
+
 
 /*------Media Queries----------------*/
 
