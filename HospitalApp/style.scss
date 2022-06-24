@@ -1,3 +1,4 @@
-*{
-    box-sizing: border-box;
-}
+@import './partials/_config';
+@import './partials/mixins.scss';
+@import './partials/general';
+
