@@ -1,0 +1,33 @@
+#services{
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+
+        article{
+            @include gradientBackground;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            display: flex;
+            gap: 1.3rem;
+            height: fit-content;
+            transition: all 350ms ease;
+
+            &:hover{
+                margin-top: -0.5rem;
+            }
+
+            i{
+                font-size: 1.5rem;
+            }
+
+            div{
+                
+                h4{
+                    margin-bottom: 0.6rem;
+                }
+
+            }
+        }
+    }
+}

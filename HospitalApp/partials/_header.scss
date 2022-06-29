@@ -33,14 +33,13 @@ header{
 
 @media screen and(max-width: 1024px) {
     header{
-        height: 60vh;
-        
+        height: 100vh;
 
         .container{
             gap: 1rem;
-            margin-top: 3rem;
+            
             .header__content{
-
+                margin-top: 0;
 
                 h1{
                     font-size: 2.5rem;
@@ -50,6 +49,8 @@ header{
     }
 
 }
+
+
 
 @media screen and(max-width: 600px){
 
