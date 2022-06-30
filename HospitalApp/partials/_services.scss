@@ -31,3 +31,39 @@
         }
     }
 }
+
+// Media Queries//
+@media screen and (max-width: 1024px)  {
+    #services{
+        .container{
+            gap: 1rem;
+            grid-template-columns: 1fr 1fr;
+
+            article{
+                gap: 0.8rem;
+                padding: 1.2rem;
+
+                &:hover{
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    #services{
+
+        .container{
+            grid-template-columns: 1fr;
+
+            article{
+                div{
+                    h4{
+                        margin-bottom: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
