@@ -2,6 +2,7 @@ const navMenu = document.querySelector('#nav__items');
 const openNavMenu = document.querySelector('#open__nav-btn');
 const closeNavMenu = document.querySelector('#close__nav-btn');
 
+//navBar
 
 openNavMenu.addEventListener('click', () => {
     openNavMenu.style.display = 'none';
