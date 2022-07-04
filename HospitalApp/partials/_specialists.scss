@@ -1,0 +1,9 @@
+#specialists{
+    
+    .container{
+        width: 68%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+}
