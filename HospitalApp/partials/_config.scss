@@ -1,18 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
 
 
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    outline: none;
-    text-decoration: none;
-    border: none;
-    
-}
-
 $primary-color: #480ca8;
 $primary-color-variant: #4cc9f0;
 $secondary-color: #f72585;
@@ -24,4 +12,12 @@ $container-lg: 82%;
 $container-md: 90%;
 $light-color: rgba($white-color, 0.7);
 
-
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    outline: none;
+    text-decoration: none;
+    border: none;
+}
