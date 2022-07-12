@@ -7,6 +7,10 @@
     <title>HospitalApp</title>
     <link rel="stylesheet" href="../css/style.min.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 </head>
 <body>
     <nav>
@@ -189,15 +193,15 @@
 
     <!----------------------End of specialists-->
 
-    <section id="testimonials">
+    <section id="testimonials" class="swiper mySwiper">
         <h2>
             What our patients says
         </h2>
 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum quaerat dolor voluptate saepe odio!</p>
 
-        <div class="container">
-            <article>
+        <div class="swiper-wrapper">
+            <article class="swiper-slide">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt enim minima facere autem quo voluptatem esse saepe nulla, debitis dolorem ab placeat unde voluptatum delectus ex voluptatibus nam. Quae, accusamus?
                 </p>
@@ -214,7 +218,7 @@
                 </div>
             </article>
 
-            <article>
+            <article class="swiper-slide">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt enim minima facere autem quo voluptatem esse saepe nulla, debitis dolorem ab placeat unde voluptatum delectus ex voluptatibus nam. Quae, accusamus?
                 </p>
@@ -231,7 +235,7 @@
                 </div>
             </article>
 
-            <article>
+            <article class="swiper-slide">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt enim minima facere autem quo voluptatem esse saepe nulla, debitis dolorem ab placeat unde voluptatum delectus ex voluptatibus nam. Quae, accusamus?
                 </p>
@@ -248,7 +252,7 @@
                 </div>
             </article>
 
-            <article>
+            <article class="swiper-slide">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt enim minima facere autem quo voluptatem esse saepe nulla, debitis dolorem ab placeat unde voluptatum delectus ex voluptatibus nam. Quae, accusamus?
                 </p>
@@ -265,7 +269,7 @@
                 </div>
             </article>
 
-            <article>
+            <article class="swiper-slide">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt enim minima facere autem quo voluptatem esse saepe nulla, debitis dolorem ab placeat unde voluptatum delectus ex voluptatibus nam. Quae, accusamus?
                 </p>
@@ -282,12 +286,11 @@
                 </div>
             </article>
         </div>
-
-       
+        <div class="swiper-pagination"></div>
     </section>
 
 
-
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>

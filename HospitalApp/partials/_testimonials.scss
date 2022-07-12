@@ -1,7 +1,7 @@
-#testimonials{
+.swiper{
     width: $container-lg;
-    .container{
-        article{
+    .swiper-wrapper{
+        .swiper-slide{
             @include gradientBackground;
             padding: 1.5rem 2rem;
             border-radius: 1rem;
@@ -30,4 +30,17 @@
             
         }   
     }
+}
+
+// Media Queries//
+
+@media screen and (max-width: 600px) {
+    .swiper{
+        .swiper-wrapper{
+            .swiper-slide{
+                padding: 1.5rem;
+            }
+        }
+    }
+    
 }

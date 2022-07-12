@@ -15,3 +15,24 @@ const closeNav = () => {
     closeNavMenu.style.display = 'none';
 }
 closeNavMenu.addEventListener('click', closeNav );
+
+let swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+
+    breakpoints:{
+        //width >=600px
+        600: {
+            slidesPerView: 2
+        },
+
+        //width >=1024px
+        1024: {
+            slidesPerView: 3
+        }
+    }
+  });
