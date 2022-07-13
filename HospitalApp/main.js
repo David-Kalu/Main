@@ -16,6 +16,8 @@ const closeNav = () => {
 }
 closeNavMenu.addEventListener('click', closeNav );
 
+//SwiperJs Interaction
+
 let swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
