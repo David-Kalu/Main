@@ -1,6 +1,7 @@
 .swiper{
     width: $container-lg;
     .swiper-wrapper{
+        margin-bottom: 4rem;
         .swiper-slide{
             @include gradientBackground;
             padding: 1.5rem 2rem;
@@ -29,6 +30,10 @@
 
             
         }   
+    }
+
+    .swiper-pagination-bullet{
+        background: $primary-color;
     }
 }
 
