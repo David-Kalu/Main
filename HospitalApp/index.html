@@ -328,11 +328,44 @@
                 </article>
             </div>
             <form >
-                <input type="text" placeholder="Enter name" value="">
-                <input type="text">
-                <input type="text">
-                <input type="text">
-                <input type="text">
+                <div class="form_group">
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="Enter your name" name="patient's name" id="name" required>
+                </div>
+                <div class="form_group">
+                    <label for="phone">Phone Number</label>
+                    <input type="number" placeholder="Enter your phone number" name="Phone Number" id="phone" required>
+                </div>
+                <div class="form_group">
+                    <label for="date">Date</label>
+                    <input type="date" placeholder="choose a date" name="date" id="date" required>
+                </div>
+                <div class="form_group">
+                    <label for="department">select department</label>
+                    <select name="Department" id="department" required>
+                        <option value="Department One">Department One</option>
+                        <option value="Department Two">Department Twp</option>
+                        <option value="Department Three">Department Three</option>
+                        <option value="Department Four">Department Four</option>
+                    </select>
+                </div>
+                <div class="form_group">
+                    <label for="doctor">select doctor</label>
+                    <select name="Doctor" id="doctor" required>
+                        <option value="Doctor One">Doctor One</option>
+                        <option value="Doctor Two">Doctor Two</option>
+                        <option value="Doctor Three">Doctor Three</option>
+                        <option value="Doctor Four">Doctor Four</option>
+                    </select>
+                </div>
+
+                <div class="form_group">
+                    <label for="message">Additonal Message</label>
+                    <textarea name="Added message" id="message" rows="6"></textarea>
+                </div>
+
+                <input type="submit" value="Submit Request" class="btn-primary">
+                
 
             </form>
         </div>
