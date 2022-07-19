@@ -57,3 +57,20 @@
         }
     }
 }
+
+/*--------------------Media Queries small devices---------------------*/
+
+@media screen and (max-width: 600px){
+    #appointment{
+        .container{
+            grid-template-columns: 1fr;
+            gap: 2rem;
+
+            .info{
+                h2, p{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
