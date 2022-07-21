@@ -1,6 +1,8 @@
 const navMenu = document.querySelector('#nav__items');
 const openNavMenu = document.querySelector('#open__nav-btn');
 const closeNavMenu = document.querySelector('#close__nav-btn');
+const form = document.getElementById("my-form");
+const submitButton = document.getElementById("form-submit");
 
 
 openNavMenu.addEventListener('click', () => {
@@ -37,4 +39,11 @@ let swiper = new Swiper(".mySwiper", {
             slidesPerView: 3
         }
     }
-  });
+});
+
+function resetForm(){
+    form.submit();
+    form.reset();
+}
+
+submitButton.addEventListener('click', resetForm );
