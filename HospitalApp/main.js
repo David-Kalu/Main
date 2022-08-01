@@ -18,6 +18,14 @@ const closeNav = () => {
 }
 closeNavMenu.addEventListener('click', closeNav );
 
+if(window.innerWidth < 1024){
+    document.querySelectorAll('nav__items li a').forEach(navItem =>{
+        navItem.addEventListener('click', () =>{
+            closeNav();
+        });
+    })
+}
+
 //SwiperJs Interaction
 
 let swiper = new Swiper(".mySwiper", {
@@ -47,3 +55,5 @@ function resetForm(){
 }
 
 submitButton.addEventListener('click', resetForm );
+
+
